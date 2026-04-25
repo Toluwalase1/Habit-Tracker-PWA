@@ -1,0 +1,1 @@
+// export function getHabitSlug(name: string): string;
