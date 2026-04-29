@@ -35,7 +35,7 @@ export default function HabitForm({ initialData, onSave, onCancel }: HabitFormPr
     >
       <h2 className="text-xl font-bold mb-6 text-gray-800">{initialData ? 'Edit Habit' : 'Create Habit'}</h2>
       
-      {error && <div className="text-red-500 text-sm mb-4 bg-red-50 p-3 rounded">{error}</div>}
+      {error && <div className="text-red-500 font-bold text-sm mb-4 bg-red-50 p-3 rounded">{error}</div>}
       
       <div className="mb-4">
         <label className="block mb-2 font-medium text-gray-700">Name</label>
@@ -44,7 +44,7 @@ export default function HabitForm({ initialData, onSave, onCancel }: HabitFormPr
           value={name}
           onChange={(e) => setName(e.target.value)}
           data-testid="habit-name-input"
-          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"
+          className="w-full text-black p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"
           placeholder="e.g. Read 10 pages"
         />
       </div>
@@ -55,15 +55,15 @@ export default function HabitForm({ initialData, onSave, onCancel }: HabitFormPr
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           data-testid="habit-description-input"
-          className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"
+          className="w-full p-3 border rounded-lg focus:ring-2 text-black focus:ring-blue-500 outline-none transition"
           placeholder="Why do you want to build this habit?"
         />
       </div>
 
       <div className="mb-6">
-        <label className="block mb-2 font-medium text-gray-700">Frequency</label>
+        <label className="block mb-2 font-medium text-gray-700 ">Frequency</label>
         <select 
-          disabled 
+          disabled
           value="daily"
           data-testid="habit-frequency-select"
           className="w-full p-3 border rounded-lg bg-gray-50 text-gray-500 cursor-not-allowed"

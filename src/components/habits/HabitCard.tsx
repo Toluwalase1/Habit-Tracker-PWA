@@ -35,7 +35,7 @@ export default function HabitCard({ habit, onDelete, onEdit, onUpdate }: HabitCa
       <div className="mb-4 md:mb-0">
         <h3 className={`text-xl font-bold ${isCompletedToday ? 'text-green-900' : 'text-gray-900'}`}>{habit.name}</h3>
         {habit.description && <p className={`mt-1 ${isCompletedToday ? 'text-green-700' : 'text-gray-500'}`}>{habit.description}</p>}
-        <p className="mt-3 text-sm font-semibold flex items-center gap-1.5">
+        <p className="mt-3 text-sm text-black flex items-center  gap-1.5">
           <span className="text-orange-500">🔥</span> Streak: 
           <span data-testid={`habit-streak-${slug}`} className="bg-gray-100 px-2 py-0.5 rounded-full">{currentStreak}</span>
         </p>
